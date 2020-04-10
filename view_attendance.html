@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DoelCampus - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Training Managment System - DoelCampus " />
+    <meta name="author" content="DoelCampus" />
+    <link href="libs/favicon.png" type="image/png" rel="icon">
+    <link href="libs/css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <div class="main_menu main_menu_hidden">
+        <!--load sidebar page -->
+        <div class="logo">
+            <a href="http://alive.doelcampus.com/">
+                <img src="http://alive.doelcampus.com/uploads/logo/logo.png" alt="DoelCampus">
+            </a>
+        </div>
+        <div id="accordion">
+
+            <div class="main_menu_item">
+                <a href="index.html" class=" active  ">
+                    <p class="menu_toggle  active  ">
+                        <span class="icofont icofont-home  active  "></span> Dashboard
+                        <i class="icofont icofont-check-circled  active  "></i>
+                    </p>
+                </a>
+            </div>
+            <div class="main_menu_item">
+                <div id="headingOne">
+                    <p class="collapsed menu_toggle   " data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="headingOne">
+                        <span class="icofont icofont-teacher  "></span> Students
+                        <i class="icofont icofont-simple-right  "></i>
+                    </p>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="collapseOne" data-parent="#accordion">
+                    <ul>
+                        <li>
+                            <a class=" " href="view_student.html">View Student</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_menu_item">
+                <div id="headingFour">
+                    <p class="collapsed menu_toggle " data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <span class="icofont icofont-users-social "></span> Batches
+                        <i class="icofont icofont-simple-right "></i>
+                    </p>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <ul>
+                        <li>
+                            <a class=" " href="add_batch.html">Add Batch</a>
+                        </li>
+                        <li>
+                            <a class=" " href="running_batch.html">Running Batch</a>
+                        </li>
+                        <li>
+                            <a class=" " href="end_batch.html">End Batch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_menu_item">
+                <div id="headingFive">
+                    <p class="collapsed menu_toggle " data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <span class="icofont icofont-pay "></span> Attendance
+                        <i class="icofont icofont-simple-right "></i>
+                    </p>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <ul>
+                        <li>
+                            <a class=" " href="add_attendance.html">Add Attendance</a>
+                        </li>
+                        <li>
+                            <a class=" " href="view_attendance.html">View Attendance</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_menu_item">
+                <div id="headingSix">
+                    <p class="collapsed menu_toggle " data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <span class="icofont icofont-police "></span> Payment
+                        <i class="icofont icofont-simple-right "></i>
+                    </p>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <ul>
+                        <li>
+                            <a class=" " href="add_payment.html">Add Payment</a>
+                        </li>
+                        <li>
+                            <a class=" " href="view_payment.html">View Payment</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_menu_item">
+                <a href="http://alive.doelcampus.com/registration" class="non_active ">
+                    <p class="menu_toggle non_active ">
+                        <span class="icofont icofont-logout"></span> Logout 
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main_wrapper main_wrapper_full">
+        <!-- load nav page -->
+        <nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7 col-9">
+                        <div class="res_menu_toggle">
+                            <i class="icofont icofont-navigation-menu"></i>
+                        </div>
+                        <div class="menu_off_area"></div>
+                        <h4 class="d-inline page_title">
+                            Batch Details </h4>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--load content page -->
+        <div class="mainMinContent">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 class="mb-5 text-center">Search With Batch ID or Date</h5>
+                            <table id="students_table" class="table students_table mt-x" style="width: 100%">
+                                <thead>
+                                    <tr class="data_row">
+                                        <td>#</td>
+                                        <td>Student Name</td>
+                                        <td>Date</td>
+                                        <td>Total Student</td>
+                                        <td>Total Present</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">26</span></td>
+                                        <td><span class="total_b_count">25</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">10</span></td>
+                                        <td><span class="total_b_count">9</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                    <tr class="data_row">
+                                        <td>1</td>
+                                        <td><a href="" class="text-info">Md Mojibur Rahman</a></td>
+                                        <td>25/6/18</td>
+                                        <td><span class="total_b_count">30</span></td>
+                                        <td><span class="total_b_count">29</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row no-gutters">
+            <div class="col-md-6 text-md-left text-sm-center text-center">
+                <p>&copy; 2018 All Rights Reserved</p>
+            </div>
+            <div class="col-md-6 text-md-right text-sm-center text-center">
+                <p>Powered By:
+                    <a class="font-weight-bold" target="_blank" href="http://doelcampus.com/">
+                        <span class="text-danger">Doel</span>Campus</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="libs/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="libs/js/vendor/jquery-3.2.1.min.js"></script>
+    <!-- animsition js -->
+    <script src="libs/js/animsition.min.js"></script>
+    <script src="libs/js/plugins.js"></script>
+    <script src="libs/js/main.js"></script>
+</body>
+
+</html>

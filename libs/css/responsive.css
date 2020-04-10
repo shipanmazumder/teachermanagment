@@ -1,0 +1,82 @@
+@media (max-width: 576px) {
+  .notification {
+    display: none !important;
+  }
+  form > .container {
+    padding: 0 !important;
+  }
+  .designation_pop {
+    width: 250px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100% !important;
+  }
+  .mt-sm-30{
+    margin-top: 30px;
+  }
+  .row.form-group.justify-content-center.mt-4 input[type="submit"] {
+    margin-bottom: 15px;
+  }
+  .main_menu_hidden{
+    margin-left: -100%;
+  }
+  .main_menu_show{
+    margin-left: 0px !important;
+  }
+  .main_wrapper_full{
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .res_menu_toggle {
+    display: inline-block !important;
+  }
+  .mb-sm-16{
+    margin-bottom: 16px;
+  }
+  #students_table_length, #students_table_filter {
+    text-align: right;
+  }
+  #students_table_info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #students_table_paginate ul.pagination {
+    justify-content: center;
+  }
+  .user_main_info.text-right {
+    text-align: left !important;
+    margin-bottom: 40px;
+  }
+  #students_table_wrapper {
+    padding: 0;
+  }
+  .page_title {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .mt-md-30{
+    margin-top: 30px;
+  }
+  .fc-toolbar.fc-header-toolbar .fc-left {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .fc-toolbar.fc-header-toolbar .fc-right {
+    width: 100%;
+    display: block;
+  }
+  .mb-md-16{
+    margin-bottom: 16px;
+  }
+  .oFlow-x_scroll{
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 1200px) { }
